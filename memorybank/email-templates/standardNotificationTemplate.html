@@ -1,0 +1,529 @@
+html
+<!DOCTYPE html>
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <title>Ödeme Süreci Bildirimi</title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f7fa;
+            line-height: 1.6;
+        }
+
+        /* Preheader text - görünmez ama email önizlemede görünür */
+        .preheader {
+            display: none !important;
+            visibility: hidden;
+            mso-hide: all;
+            font-size: 1px;
+            line-height: 1px;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        /* Email Container */
+        .email-wrapper {
+            width: 100%;
+            background-color: #f4f7fa;
+            padding: 20px 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Header with gradient */
+        .header {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
+            padding: 40px 30px 32px;
+            text-align: center;
+            position: relative;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4F46E5, #7C3AED, #EC4899);
+        }
+        .header-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .header p {
+            margin: 12px 0 0 0;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 400;
+        }
+
+        /* Progress Indicator */
+        .progress-container {
+            background: linear-gradient(to right, #E0E7FF 0%, #E0E7FF {{PROGRESS_PERCENT}}%, #F3F4F6 {{PROGRESS_PERCENT}}%, #F3F4F6 100%);
+            height: 6px;
+            width: 100%;
+        }
+
+        /* Content Area */
+        .content {
+            padding: 40px 30px;
+        }
+        .greeting {
+            font-size: 18px;
+            color: #1F2937;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .message {
+            font-size: 15px;
+            color: #4B5563;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        /* Status Badge - Modern */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 24px;
+            font-size: 13px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+        }
+
+        /* Info Card - Modern Design */
+        .info-card {
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            border: 1px solid #E5E7EB;
+            border-left: 4px solid #4F46E5;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 28px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        .info-card-title {
+            margin: 0 0 20px 0;
+            font-size: 17px;
+            color: #1F2937;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .info-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+        }
+        .info-row {
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+        .info-label {
+            padding: 12px 16px;
+            font-weight: 600;
+            color: #6B7280;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            width: 45%;
+        }
+        .info-value {
+            padding: 12px 16px;
+            color: #1F2937;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: right;
+        }
+        .info-value-highlight {
+            color: #4F46E5;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* Alert Box */
+        .alert-box {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border-left: 4px solid #F59E0B;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+        }
+        .alert-box-content {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .alert-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .alert-text {
+            margin: 0;
+            color: #92400E;
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #E5E7EB, transparent);
+            margin: 32px 0;
+        }
+
+        /* CTA Button - Modern */
+        .button-container {
+            text-align: center;
+            margin: 36px 0;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            min-height: 44px; /* Touch target size */
+            line-height: 1.2;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #4338CA 0%, #6D28D9 100%);
+            box-shadow: 0 14px 30px rgba(79, 70, 229, 0.4);
+            transform: translateY(-2px);
+        }
+        .btn-icon {
+            margin-right: 8px;
+        }
+
+        /* Link fallback */
+        .link-fallback {
+            font-size: 12px;
+            color: #6B7280;
+            text-align: center;
+            margin-top: 16px;
+            line-height: 1.6;
+        }
+        .link-fallback a {
+            color: #4F46E5;
+            text-decoration: none;
+            word-break: break-all;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: #F9FAFB;
+            padding: 32px 30px;
+            text-align: center;
+            border-top: 1px solid #E5E7EB;
+        }
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 12px;
+        }
+        .footer-text {
+            font-size: 13px;
+            color: #6B7280;
+            line-height: 1.6;
+            margin: 8px 0;
+        }
+        .footer-link {
+            color: #4F46E5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #111827 !important;
+            }
+            .email-wrapper {
+                background-color: #111827 !important;
+            }
+            .email-container {
+                background-color: #1F2937 !important;
+                border: 1px solid #374151;
+            }
+            .content {
+                background-color: #1F2937 !important;
+            }
+            .greeting {
+                color: #F9FAFB !important;
+            }
+            .message {
+                color: #D1D5DB !important;
+            }
+            .info-card {
+                background: #374151 !important;
+                border-color: #4B5563 !important;
+            }
+            .info-card-title {
+                color: #F9FAFB !important;
+            }
+            .info-row {
+                background-color: #1F2937 !important;
+            }
+            .info-label {
+                color: #9CA3AF !important;
+            }
+            .info-value {
+                color: #F3F4F6 !important;
+            }
+            .footer {
+                background-color: #111827 !important;
+                border-top-color: #374151 !important;
+            }
+            .footer-logo {
+                color: #F9FAFB !important;
+            }
+            .footer-text {
+                color: #9CA3AF !important;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                border-radius: 0 !important;
+                margin: 0 !important;
+            }
+            .header {
+                padding: 32px 20px 24px !important;
+            }
+            .header h1 {
+                font-size: 24px !important;
+            }
+            .content {
+                padding: 32px 20px !important;
+            }
+            .info-card {
+                padding: 20px !important;
+            }
+            .info-label,
+            .info-value {
+                display: block !important;
+                width: 100% !important;
+                text-align: left !important;
+                padding: 8px 12px !important;
+            }
+            .info-label {
+                padding-bottom: 4px !important;
+                font-size: 12px !important;
+            }
+            .info-value {
+                padding-top: 0 !important;
+                font-size: 15px !important;
+            }
+            .btn-primary {
+                padding: 14px 28px !important;
+                font-size: 15px !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
+
+        /* Outlook-specific fixes */
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            .btn-primary:hover {
+                background: linear-gradient(135deg, #4338CA 0%, #6D28D9 100%) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preheader text -->
+    <div class="preheader">
+        <!-- {{GONDERICI_ADI}} = CreatedBy veya önceki aşamayı onaylayan (Stage2_IcPiyasaMuduru_ApprovedBy, Stage3_ApprovedBy, vb.) -->
+        <!-- {{SUREC_NO}} = "ÖS-" + Numarator -->
+        {{GONDERICI_ADI}} tarafından {{SUREC_NO}} numaralı ödeme süreci onayınıza geldi
+    </div>
+
+    <div class="email-wrapper" role="article" aria-label="Ödeme Süreci Bildirimi">
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+                <td align="center">
+                    <div class="email-container">
+                        <!-- Header -->
+                        <div class="header">
+                            <span class="header-icon" role="img" aria-label="Bildirim">🔔</span>
+                            <h1>Ödeme Süreci Bildirimi</h1>
+                            <p>Yeni bir görev onayınızı bekliyor</p>
+                        </div>
+
+                        <!-- Progress Indicator -->
+                        <!-- {{ASAMA_NO}} = CurrentStage (1-6) -->
+                        <div class="progress-container" role="progressbar" aria-valuenow="{{ASAMA_NO}}" aria-valuemin="1" aria-valuemax="6"></div>
+
+                        <!-- Content -->
+                        <div class="content">
+                            <!-- {{ALICI_ADI}} = İlgili aşamayı onaylayacak kişi (Stage2_IcPiyasaMuduru_ApprovedBy, Stage3_ApprovedBy, Stage4_ApprovedBy, Stage5_ApprovedBy veya CreatedBy) -->
+                            <p class="greeting">
+                                Merhaba <strong>{{ALICI_ADI}}</strong>,
+                            </p>
+
+                            <!-- {{GONDERICI_ADI}} = Önceki aşamayı onaylayan veya süreci başlatan -->
+                            <!-- {{ASAMA_NO}} = CurrentStage -->
+                            <p class="message">
+                                <strong>{{GONDERICI_ADI}}</strong> tarafından başlatılan ödeme süreci
+                                <span class="status-badge">
+                                    <span>✓</span> Aşama {{ASAMA_NO}}
+                                </span>
+                                onayınıza gelmiştir.
+                            </p>
+
+                            <!-- Süreç Bilgileri -->
+                            <div class="info-card">
+                                <h3 class="info-card-title">
+                                    <span role="img" aria-label="Bilgi">📋</span> Süreç Bilgileri
+                                </h3>
+                                <table class="info-table" role="presentation" cellspacing="0" cellpadding="0">
+                                    <!-- {{SUREC_NO}} = "ÖS-" + Numarator -->
+                                    <tr class="info-row">
+                                        <td class="info-label">Süreç No</td>
+                                        <td class="info-value">{{SUREC_NO}}</td>
+                                    </tr>
+                                    <!-- {{BASLATAN_ADI}} = CreatedBy (from Users table) -->
+                                    <tr class="info-row">
+                                        <td class="info-label">Başlatan</td>
+                                        <td class="info-value">{{BASLATAN_ADI}}</td>
+                                    </tr>
+                                    <!-- {{TITLE}} = paymentTasks.Title (Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)) -->
+                                    <tr class="info-row">
+                                        <td class="info-label">Görev</td>
+                                        <td class="info-value">{{TITLE}}</td>
+                                    </tr>
+                                    <!-- {{VADE_BASLANGIC}} = DueDateStart (formatted DD.MM.YYYY) -->
+                                    <tr class="info-row">
+                                        <td class="info-label">Vade Başlangıç</td>
+                                        <td class="info-value">{{VADE_BASLANGIC}}</td>
+                                    </tr>
+                                    <!-- {{VADE_BITIS}} = DueDateEnd (formatted DD.MM.YYYY) -->
+                                    <tr class="info-row">
+                                        <td class="info-label">Vade Bitiş</td>
+                                        <td class="info-value">{{VADE_BITIS}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!-- Not Varsa -->
+                            <!-- {{SUREC_NOTU}} = Süreç notu (opsiyonel) -->
+                            {{#IF SUREC_NOTU}}
+                            <div class="alert-box">
+                                <div class="alert-box-content">
+                                    <span class="alert-icon" role="img" aria-label="Uyarı">💬</span>
+                                    <p class="alert-text">
+                                        <strong>Süreç Notu:</strong><br>
+                                        {{SUREC_NOTU}}
+                                    </p>
+                                </div>
+                            </div>
+                            {{/IF}}
+
+                            <div class="divider"></div>
+
+                            <!-- CTA Button -->
+                            <p style="font-size: 15px; color: #4B5563; line-height: 1.6; margin: 0 0 20px 0; text-align: center;">
+                                Detaylı bilgi ve işlem yapmak için süreci görüntüleyin:
+                            </p>
+
+                            <!-- {{SUREC_LINKI}} = Sabit link: http://167.16.21.50:81/payment/tasks -->
+                            <div class="button-container">
+                                <!--[if mso]>
+                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{SUREC_LINKI}}" style="height:44px;v-text-anchor:middle;width:220px;" arcsize="27%" stroke="f" fillcolor="#4F46E5">
+                                    <w:anchorlock/>
+                                    <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:600;">🔍 Süreci Görüntüle</center>
+                                </v:roundrect>
+                                <![endif]-->
+                                <!--[if !mso]><!-->
+                                <a href="{{SUREC_LINKI}}" class="btn-primary" role="button">
+                                    <span class="btn-icon">🔍</span> Süreci Görüntüle
+                                </a>
+                                <!--<![endif]-->
+                            </div>
+
+                            <p class="link-fallback">
+                                <em>Buton çalışmıyorsa linki kopyalayın:</em><br>
+                                <a href="{{SUREC_LINKI}}">{{SUREC_LINKI}}</a>
+                            </p>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="footer">
+                            <p class="footer-logo">AB Portal</p>
+                            <p class="footer-text">
+                                Bu mail otomatik olarak gönderilmiştir. Lütfen yanıtlamayınız.
+                            </p>
+                            <p class="footer-text">
+                                Sorularınız için: <a href="mailto:abportal@anadolubakir.com" class="footer-link">abportal@anadolubakir.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

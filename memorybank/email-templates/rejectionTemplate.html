@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Süreç Geri Atandı</title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+    <style>
+        /* Reset & Base Styles */
+        body, table, td, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #F3F4F6;
+        }
+
+        /* Container Styles */
+        .email-wrapper {
+            width: 100%;
+            background-color: #F3F4F6;
+            padding: 20px 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Warning Header - Red/Orange Gradient */
+        .warning-header {
+            background: linear-gradient(135deg, #EF4444 0%, #DC2626 50%, #B91C1C 100%);
+            color: #FFFFFF;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+        .warning-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .warning-header p {
+            margin: 0;
+            font-size: 16px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        .warning-icon {
+            font-size: 48px;
+            display: inline-block;
+            margin-bottom: 10px;
+            animation: shake 2s ease-in-out infinite;
+        }
+
+        /* Content Area */
+        .content {
+            padding: 40px 30px;
+        }
+        .greeting {
+            font-size: 18px;
+            color: #1F2937;
+            margin: 0 0 20px 0;
+            font-weight: 500;
+        }
+        .intro-text {
+            font-size: 15px;
+            color: #4B5563;
+            line-height: 1.6;
+            margin: 0 0 30px 0;
+        }
+
+        /* Info Card */
+        .info-card {
+            background-color: #F9FAFB;
+            border-left: 4px solid #DC2626;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .info-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 16px;
+            color: #1F2937;
+            font-weight: 600;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        .info-label {
+            font-size: 14px;
+            color: #6B7280;
+            font-weight: 500;
+        }
+        .info-value {
+            font-size: 14px;
+            color: #1F2937;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* Rejection Reason Box */
+        .rejection-box {
+            background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
+            border: 2px solid #DC2626;
+            border-radius: 10px;
+            padding: 24px;
+            margin: 25px 0;
+            position: relative;
+        }
+        .rejection-box::before {
+            content: "⚠️";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background-color: #DC2626;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .rejection-box h3 {
+            margin: 10px 0 15px 0;
+            font-size: 17px;
+            color: #991B1B;
+            font-weight: 700;
+        }
+        .rejection-text {
+            font-size: 15px;
+            color: #7F1D1D;
+            line-height: 1.7;
+            margin: 0;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        /* Action Checklist */
+        .action-checklist {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border-left: 4px solid #F59E0B;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .action-checklist h4 {
+            margin: 0 0 12px 0;
+            font-size: 16px;
+            color: #92400E;
+            font-weight: 600;
+        }
+        .action-checklist ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style: none;
+        }
+        .action-checklist li {
+            font-size: 14px;
+            color: #78350F;
+            line-height: 1.8;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 8px;
+        }
+        .action-checklist li::before {
+            content: "✏️";
+            position: absolute;
+            left: -20px;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+            color: #FFFFFF;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 0 4px;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #E5E7EB, transparent);
+            margin: 30px 0;
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .btn-warning {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+            color: #FFFFFF !important;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(239, 68, 68, 0.3);
+            min-width: 44px;
+            min-height: 44px;
+            line-height: 1.2;
+        }
+        .btn-warning:hover {
+            background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+            box-shadow: 0 6px 12px rgba(239, 68, 68, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Link Fallback */
+        .link-fallback {
+            font-size: 12px;
+            color: #6B7280;
+            text-align: center;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+        .link-fallback a {
+            color: #DC2626;
+            word-break: break-all;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+            color: #D1D5DB;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin: 0 0 15px 0;
+        }
+        .footer-text {
+            font-size: 13px;
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        .footer-link {
+            color: #60A5FA !important;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer-link:hover {
+            color: #93C5FD !important;
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px) rotate(-5deg); }
+            75% { transform: translateX(5px) rotate(5deg); }
+        }
+
+        /* Preheader */
+        .preheader {
+            display: none;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+            mso-hide: all;
+        }
+
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            .email-wrapper {
+                background-color: #111827 !important;
+            }
+            .email-container {
+                background-color: #1F2937 !important;
+            }
+            .content {
+                background-color: #1F2937 !important;
+            }
+            .greeting, .info-card h3 {
+                color: #F9FAFB !important;
+            }
+            .intro-text, .info-value {
+                color: #D1D5DB !important;
+            }
+            .info-card {
+                background-color: #374151 !important;
+            }
+            .info-label {
+                color: #9CA3AF !important;
+            }
+            .rejection-box {
+                background: linear-gradient(135deg, #7F1D1D 0%, #991B1B 100%) !important;
+            }
+            .rejection-text {
+                background-color: rgba(0, 0, 0, 0.3) !important;
+                color: #FEE2E2 !important;
+            }
+            .action-checklist {
+                background: linear-gradient(135deg, #78350F 0%, #92400E 100%) !important;
+            }
+            .action-checklist li {
+                color: #FEF3C7 !important;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+                border-radius: 0 !important;
+            }
+            .warning-header {
+                padding: 30px 20px !important;
+            }
+            .warning-header h1 {
+                font-size: 24px !important;
+            }
+            .warning-header p {
+                font-size: 14px !important;
+            }
+            .content {
+                padding: 30px 20px !important;
+            }
+            .info-row {
+                flex-direction: column;
+                gap: 4px;
+            }
+            .info-value {
+                text-align: left;
+            }
+            .btn-warning {
+                display: block !important;
+                width: 100% !important;
+                padding: 14px 20px !important;
+            }
+            .rejection-box {
+                padding: 20px 16px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preheader Text -->
+    <div class="preheader" role="none" aria-hidden="true">
+        <!-- {{GERI_ATAYAN_ADI}} = Geri atayan kişi (Stage4_ApprovedBy, Stage5_ApprovedBy, from Users table) -->
+        <!-- {{SUREC_NO}} = "ÖS-" + Numarator -->
+        ⚠️ Süreç geri atandı - {{GERI_ATAYAN_ADI}} tarafından revizyon talep edildi. Süreç No: {{SUREC_NO}}
+    </div>
+
+    <div class="email-wrapper" role="article" aria-label="Süreç Geri Atama Bildirimi">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F3F4F6;">
+            <tr>
+                <td align="center" style="padding: 20px 0;">
+                    <div class="email-container">
+                        <!-- Warning Header -->
+                        <div class="warning-header" role="banner">
+                            <div class="warning-icon" role="img" aria-label="Uyarı ikonu">⚠️</div>
+                            <h1>Süreç Geri Atandı</h1>
+                            <p>Revizyon gerekiyor - Düzeltme yapmanız bekleniyor</p>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="content" role="main">
+                            <!-- {{ALICI_ADI}} = Geri atanan kişi (Stage4_ApprovedBy, CreatedBy, from Users table) -->
+                            <p class="greeting">
+                                Merhaba <strong>{{ALICI_ADI}}</strong>,
+                            </p>
+
+                            <!-- {{GERI_ATAYAN_ADI}} = Geri atayan kişi (Stage4_ApprovedBy, Stage5_ApprovedBy) -->
+                            <!-- {{HEDEF_ASAMA}} = New CurrentStage after rejection -->
+                            <p class="intro-text">
+                                <strong>{{GERI_ATAYAN_ADI}}</strong> tarafından süreç
+                                <span class="status-badge" role="status">Aşama {{HEDEF_ASAMA}}</span>
+                                aşamasına geri gönderilmiştir. Lütfen aşağıdaki detayları inceleyiniz.
+                            </p>
+
+                            <!-- Process Info Card -->
+                            <div class="info-card" role="region" aria-label="Süreç Bilgileri">
+                                <h3>📋 Süreç Bilgileri</h3>
+                                <!-- {{SUREC_NO}} = "ÖS-" + Numarator -->
+                                <div class="info-row">
+                                    <span class="info-label">Süreç No:</span>
+                                    <span class="info-value">{{SUREC_NO}}</span>
+                                </div>
+                                <!-- {{GERI_ATAYAN_ADI}} = Geri atayan (Stage4_ApprovedBy, Stage5_ApprovedBy) -->
+                                <!-- {{GERI_ATAYAN_ROL}} = Role from Users table -->
+                                <div class="info-row">
+                                    <span class="info-label">Geri Atayan:</span>
+                                    <span class="info-value">{{GERI_ATAYAN_ADI}} ({{GERI_ATAYAN_ROL}})</span>
+                                </div>
+                                <!-- {{GERI_ATAMA_TARIHI}} = RejectionDate (formatted DD.MM.YYYY HH:mm) -->
+                                <div class="info-row">
+                                    <span class="info-label">Geri Atama Tarihi:</span>
+                                    <span class="info-value">{{GERI_ATAMA_TARIHI}}</span>
+                                </div>
+                                <!-- {{ONCEKI_ASAMA}} = Previous CurrentStage -->
+                                <div class="info-row">
+                                    <span class="info-label">Önceki Aşama:</span>
+                                    <span class="info-value">Aşama {{ONCEKI_ASAMA}}</span>
+                                </div>
+                                <!-- {{HEDEF_ASAMA}} = New CurrentStage after rejection -->
+                                <!-- {{HEDEF_ASAMA_ADI}} = Aşama açıklaması -->
+                                <div class="info-row">
+                                    <span class="info-label">Yeni Aşama:</span>
+                                    <span class="info-value">Aşama {{HEDEF_ASAMA}} - {{HEDEF_ASAMA_ADI}}</span>
+                                </div>
+                                <!-- {{VADE_BASLANGIC}} = DueDateStart (formatted DD.MM.YYYY) -->
+                                <div class="info-row">
+                                    <span class="info-label">Vade Başlangıç:</span>
+                                    <span class="info-value">{{VADE_BASLANGIC}}</span>
+                                </div>
+                                <!-- {{VADE_BITIS}} = DueDateEnd (formatted DD.MM.YYYY) -->
+                                <div class="info-row">
+                                    <span class="info-label">Vade Bitiş:</span>
+                                    <span class="info-value">{{VADE_BITIS}}</span>
+                                </div>
+                            </div>
+
+                            <!-- Rejection Reason -->
+                            <!-- {{GERI_ATAMA_NEDENI}} = RejectionReason -->
+                            <div class="rejection-box" role="alert" aria-label="Geri Atama Nedeni">
+                                <h3>📝 Geri Atama Nedeni</h3>
+                                <p class="rejection-text">{{GERI_ATAMA_NEDENI}}</p>
+                            </div>
+                            <div class="divider" role="separator"></div>
+
+                            <!-- CTA Button -->
+                            <p class="intro-text" style="text-align: center; margin-bottom: 20px;">
+                                Lütfen süreci düzenlemek için aşağıdaki butona tıklayınız:
+                            </p>
+
+                            <!-- {{SUREC_LINKI}} = Sabit link: http://167.16.21.50:81/payment/tasks -->
+                            <div class="button-container">
+                                <!--[if mso]>
+                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{SUREC_LINKI}}" style="height:50px;v-text-anchor:middle;width:220px;" arcsize="16%" strokecolor="#DC2626" fillcolor="#EF4444">
+                                    <w:anchorlock/>
+                                    <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">🔧 Süreci Düzenle</center>
+                                </v:roundrect>
+                                <![endif]-->
+                                <!--[if !mso]><!-->
+                                <a href="{{SUREC_LINKI}}" class="btn-warning" role="button" aria-label="Süreci düzenle">
+                                    🔧 Süreci Görüntüle
+                                </a>
+                                <!--<![endif]-->
+                            </div>
+
+                            <p class="link-fallback">
+                                <em>Buton çalışmıyorsa linki kopyalayın:</em><br>
+                                <a href="{{SUREC_LINKI}}">{{SUREC_LINKI}}</a>
+                            </p>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="footer" role="contentinfo">
+                            <p class="footer-logo">AB Portal</p>
+                            <p class="footer-text">
+                                Bu mail otomatik olarak gönderilmiştir. Lütfen yanıtlamayınız.
+                            </p>
+                            <p class="footer-text">
+                                Sorularınız için: <a href="mailto:abportal@anadolubakir.com" class="footer-link">abportal@anadolubakir.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

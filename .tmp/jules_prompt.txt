@@ -1,0 +1,17 @@
+Projenin `playwright.config.ts` dosyasındaki `baseURL`, `https://theda-unscribed-mayme.ngrok-free.dev` olarak güncellendi. Tüm testler bu adrese karşı çalışmalıdır. Bu bağlamda, projenin `tests` klasörü altındaki boş `03-stage2-dept-managers`'dan `10-permissions`'a kadar olan dizinler ve `completed-processes` modülü için kapsamlı Playwright E2E testleri oluştur. Bu testler, `memorybank` klasöründeki belgelere (özellikle `productContext.md`, `activeContext.md`, `testCases.md`) ve mevcut proje yapısına (Page Object Model) dayanmalıdır.
+
+**Gereksinimler:**
+
+1.  **Yeni Page Object'ler Oluştur:** `tests/pages` altında her aşama için yeni `.ts` dosyaları oluştur (`Stage2Page.ts`, `Stage3Page.ts`, `Stage4Page.ts`, `Stage5Page.ts`, `Stage6Page.ts`, `CompletedProcessesPage.ts`). Bu sınıflar, `BasePage.ts`'i extend etmeli ve kendi aşamalarına özgü seçicileri ve eylemleri içermelidir.
+
+2.  **Yeni Test Dosyaları Oluştur:** `tests` altındaki ilgili klasörlerde (`03-stage2`, `04-stage3` vb.) yeni `.spec.ts` dosyaları oluştur.
+
+3.  **Test Senaryolarını Uygula:** Her `.spec.ts` dosyasında aşağıdaki senaryoları test et:
+    *   **Rol Bazlı Erişim:** Sadece doğru kullanıcı rolünün (`tests/data/users.ts`'den alınacak) ilgili aşamaya erişebildiğini ve eylem yapabildiğini doğrula. Yetkisiz erişim denemelerinin başarısız olduğunu test et.
+    *   **Dinamik UI:** Aşama ve role göre butonların ve inputların `enabled/disabled` veya `visible/hidden` durumlarını doğrula. Örneğin, Aşama 5'teki 'Onayla' butonu ve Aşama 6'daki salt okunur alanlar gibi.
+    *   **Onay Akışı:** Her aşamadaki onay işlemlerinin süreci bir sonraki aşamaya doğru şekilde ilerlettiğini test et.
+    *   **Geri Atama (Ret) Akışı:** Aşama 4'ten 3'e ve Aşama 5'ten 4'e 'Geri Ata' işlevselliğini test et. Ret nedeninin zorunlu olduğunu ve görevin doğru kullanıcıya yeniden atandığını doğrula.
+    *   **Form Doğrulama:** Her aşamaya özgü validasyonları test et, özellikle Aşama 3'teki zorunlu ekstre yükleme kuralını.
+    *   **Dışa Aktarımlar:** Aşama 6'da Excel talimat dosyasının indirilme olayını ve dosya adını test et.
+
+4.  **Kod Kalitesi:** Mevcut `wait()` veya `waitForTimeout()` kullanımlarını, Playwright'in stabil bekleme mekanizmalarıyla (`expect(...).toBeVisible()`, `waitForLoadState`, `waitForResponse` vb.) değiştirerek testlerin güvenilirliğini artır.
