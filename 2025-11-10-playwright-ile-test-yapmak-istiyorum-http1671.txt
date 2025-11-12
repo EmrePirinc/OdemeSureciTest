@@ -1,0 +1,18 @@
+
+ ▐▛███▜▌   Claude Code v2.0.36
+▝▜█████▛▘  Sonnet 4.5 · Claude Pro
+  ▘▘ ▝▝    C:\Users\AIFTeam-24\OneDrive - Aif Bilişim ve Danışmanlık Hiz.Ltd.Şti\Masaüstü\Anadolu Bakır\3-SAP Kurulum\Geliştirme Specleri\Emre Pirinç\01.10.2025 E-flow\Test Case
+══════════════════════════════════════════════════════════════════════════════════ Conversation compacted · ctrl+o for history ══════════════════════════════════════════════════════════════════════════════════
+  ⎿  Read tests\02-stage1\stage1.spec.ts (290 lines)
+  ⎿  Read tests\pages\Stage1Page.ts (267 lines)
+  ⎿  Read tests\pages\LoginPage.ts (178 lines)
+  ⎿  Read tests\01-login\login.spec.ts (243 lines)
+  ⎿  Read tests\helpers\auth.helper.ts (189 lines)
+  ⎿  Todo list read (14 items)
+  ⎿  Session limit reached ∙ resets 7pm
+     /upgrade to increase your usage limit.
+
+
+
+
+
