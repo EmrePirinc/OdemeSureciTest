@@ -13,7 +13,7 @@ test.describe('Stage 3 - Finance User Actions', () => {
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page);
     stage3Page = new Stage3Page(page);
-    await loginPage.goto();
+    await loginPage.navigate();
     await loginPage.login(TEST_USERS.FINANCE_USER);
     await stage3Page.navigateToTask(TASK_ID_FOR_STAGE3);
   });

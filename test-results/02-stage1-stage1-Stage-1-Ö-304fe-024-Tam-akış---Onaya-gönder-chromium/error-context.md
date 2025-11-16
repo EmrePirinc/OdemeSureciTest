@@ -1,0 +1,243 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img "Anadolu Bakır" [ref=e7]
+      - button "Toggle sidebar collapse" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+    - navigation [ref=e10]:
+      - generic [ref=e11]:
+        - link "Anasayfa" [ref=e12] [cursor=pointer]:
+          - /url: /
+          - button "Anasayfa" [ref=e13]:
+            - img [ref=e14]
+            - generic [ref=e17]: Anasayfa
+        - generic [ref=e18]:
+          - button "Satınalma" [ref=e19] [cursor=pointer]:
+            - img [ref=e20]
+            - generic [ref=e24]: Satınalma
+            - img [ref=e25]
+          - generic [ref=e27]:
+            - link "Satınalma Talep Formu" [ref=e28] [cursor=pointer]:
+              - /url: /talep-olustur
+              - button "Satınalma Talep Formu" [ref=e29]: Satınalma Talep Formu
+            - link "Talep Listesi" [ref=e31] [cursor=pointer]:
+              - /url: /talep-listesi
+              - button "Talep Listesi" [ref=e32]: Talep Listesi
+        - button "Finans" [ref=e35] [cursor=pointer]:
+          - img [ref=e36]
+          - generic [ref=e38]: Finans
+          - img [ref=e39]
+  - generic [ref=e41]:
+    - banner [ref=e42]:
+      - generic [ref=e43]:
+        - button "Görev Listesi" [ref=e45] [cursor=pointer]
+        - button "Deneme Deneme" [ref=e47] [cursor=pointer]:
+          - img [ref=e49]
+          - generic [ref=e52]: Deneme Deneme
+          - img [ref=e53]
+      - heading "Görev Listesi" [level=1] [ref=e57]
+    - main [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - text: Atanan
+            - combobox [disabled] [ref=e63]:
+              - generic: Rolüme Atananlar
+              - img [ref=e64]
+          - generic [ref=e66]:
+            - text: Görev Tipi
+            - combobox [ref=e67] [cursor=pointer]:
+              - generic: Tümü
+              - img [ref=e68]
+          - generic [ref=e70]:
+            - text: Başlangıç Tarihi
+            - textbox [active] [ref=e71]
+          - generic [ref=e72]:
+            - text: Bitiş Tarihi
+            - textbox [ref=e73]
+          - generic [ref=e74]:
+            - text: Görev Durumu
+            - combobox [ref=e75] [cursor=pointer]:
+              - generic: Devam Eden Süreçler
+              - img [ref=e76]
+        - generic [ref=e78]:
+          - generic [ref=e79] [cursor=pointer]:
+            - generic [ref=e80]:
+              - generic [ref=e81]:
+                - heading "Ödeme Süreci - Ekstre Yükleme (Aşama 3)" [level=3] [ref=e82]
+                - generic [ref=e84]: Ekstre yükleme bekleniyor
+              - paragraph [ref=e85]: ÖS-139 ödeme süreci - 11 fatura, 29,275.00 USD için ekstre yükleme ve ödeme tutarı düzenleme bekleniyor.
+              - generic [ref=e86]:
+                - generic [ref=e87]:
+                  - img [ref=e88]
+                  - strong [ref=e91]: "Başlatan:"
+                  - generic [ref=e92]: Hasan Helvali
+                - generic [ref=e93]:
+                  - img [ref=e94]
+                  - strong [ref=e98]: "Atanan:"
+                  - generic [ref=e99]: Atanmamış
+                - generic [ref=e100]:
+                  - img [ref=e101]
+                  - strong [ref=e103]: "Tarih:"
+                  - generic [ref=e104]: 2025-11-14 -
+                - generic [ref=e105]:
+                  - img [ref=e106]
+                  - strong [ref=e109]: "Fatura Sayısı:"
+                  - generic [ref=e110]: 11 adet
+            - button "Görevi Görüntüle" [ref=e112]
+          - generic [ref=e113] [cursor=pointer]:
+            - generic [ref=e114]:
+              - generic [ref=e115]:
+                - heading "Ödeme Süreci - Ekstre Yükleme (Aşama 3)" [level=3] [ref=e116]
+                - generic [ref=e117]:
+                  - generic [ref=e118]: Üzerine alındı
+                  - generic [ref=e119]: Düzenlenebilir
+              - paragraph [ref=e120]: ÖS-133 ödeme süreci - 2 fatura, 2.00 USD için ekstre yükleme ve ödeme tutarı düzenleme bekleniyor.
+              - generic [ref=e121]:
+                - generic [ref=e122]:
+                  - img [ref=e123]
+                  - strong [ref=e126]: "Başlatan:"
+                  - generic [ref=e127]: Deneme Deneme
+                - generic [ref=e128]:
+                  - img [ref=e129]
+                  - strong [ref=e133]: "Atanan:"
+                  - generic [ref=e134]:
+                    - text: Deneme Deneme
+                    - generic [ref=e135]: ()
+                - generic [ref=e136]:
+                  - img [ref=e137]
+                  - strong [ref=e139]: "Tarih:"
+                  - generic [ref=e140]: 2025-11-13 -
+                - generic [ref=e141]:
+                  - img [ref=e142]
+                  - strong [ref=e145]: "Fatura Sayısı:"
+                  - generic [ref=e146]: 2 adet
+            - button "Görevi Görüntüle" [ref=e148]
+          - generic [ref=e149] [cursor=pointer]:
+            - generic [ref=e150]:
+              - generic [ref=e151]:
+                - heading "Ödeme Süreci - Ekstre Yükleme (Aşama 3)" [level=3] [ref=e152]
+                - generic [ref=e153]:
+                  - generic [ref=e154]: Üzerine alındı
+                  - generic [ref=e155]: Düzenlenebilir
+              - paragraph [ref=e156]: ÖS-129 ödeme süreci - 2 fatura, 2.00 TRY için ekstre yükleme ve ödeme tutarı düzenleme bekleniyor.
+              - generic [ref=e157]:
+                - generic [ref=e158]:
+                  - img [ref=e159]
+                  - strong [ref=e162]: "Başlatan:"
+                  - generic [ref=e163]: Deneme Deneme
+                - generic [ref=e164]:
+                  - img [ref=e165]
+                  - strong [ref=e169]: "Atanan:"
+                  - generic [ref=e170]:
+                    - text: Deneme Deneme
+                    - generic [ref=e171]: ()
+                - generic [ref=e172]:
+                  - img [ref=e173]
+                  - strong [ref=e175]: "Tarih:"
+                  - generic [ref=e176]: 2025-11-13 -
+                - generic [ref=e177]:
+                  - img [ref=e178]
+                  - strong [ref=e181]: "Fatura Sayısı:"
+                  - generic [ref=e182]: 2 adet
+                - generic [ref=e183]:
+                  - img [ref=e184]
+                  - strong [ref=e187]: "Toplam Tutar:"
+                  - generic [ref=e188]: ₺8,60
+            - button "Görevi Görüntüle" [ref=e190]
+          - generic [ref=e191] [cursor=pointer]:
+            - generic [ref=e192]:
+              - generic [ref=e193]:
+                - heading "Ödeme Süreci - Ekstre Yükleme (Aşama 3)" [level=3] [ref=e194]
+                - generic [ref=e195]:
+                  - generic [ref=e196]: Üzerine alındı
+                  - generic [ref=e197]: Düzenlenebilir
+              - paragraph [ref=e198]: ÖS-118 ödeme süreci - 11 fatura, 23.60 TRY için ekstre yükleme ve ödeme tutarı düzenleme bekleniyor.
+              - generic [ref=e199]:
+                - generic [ref=e200]:
+                  - img [ref=e201]
+                  - strong [ref=e204]: "Başlatan:"
+                  - generic [ref=e205]: Deneme Deneme
+                - generic [ref=e206]:
+                  - img [ref=e207]
+                  - strong [ref=e211]: "Atanan:"
+                  - generic [ref=e212]:
+                    - text: Deneme Deneme
+                    - generic [ref=e213]: ()
+                - generic [ref=e214]:
+                  - img [ref=e215]
+                  - strong [ref=e217]: "Tarih:"
+                  - generic [ref=e218]: 2025-11-13 -
+                - generic [ref=e219]:
+                  - img [ref=e220]
+                  - strong [ref=e223]: "Fatura Sayısı:"
+                  - generic [ref=e224]: 11 adet
+                - generic [ref=e225]:
+                  - img [ref=e226]
+                  - strong [ref=e229]: "Toplam Tutar:"
+                  - generic [ref=e230]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e232]
+          - generic [ref=e233] [cursor=pointer]:
+            - generic [ref=e234]:
+              - generic [ref=e235]:
+                - heading "Ödeme Süreci - Ekstre Yükleme (Aşama 3)" [level=3] [ref=e236]
+                - generic [ref=e237]:
+                  - generic [ref=e238]: Üzerine alındı
+                  - generic [ref=e239]: Düzenlenebilir
+              - paragraph [ref=e240]: ÖS-102 ödeme süreci - 11 fatura, 29,275.00 TRY için ekstre yükleme ve ödeme tutarı düzenleme bekleniyor.
+              - generic [ref=e241]:
+                - generic [ref=e242]:
+                  - img [ref=e243]
+                  - strong [ref=e246]: "Başlatan:"
+                  - generic [ref=e247]: Deneme Deneme
+                - generic [ref=e248]:
+                  - img [ref=e249]
+                  - strong [ref=e253]: "Atanan:"
+                  - generic [ref=e254]:
+                    - text: Deneme Deneme
+                    - generic [ref=e255]: ()
+                - generic [ref=e256]:
+                  - img [ref=e257]
+                  - strong [ref=e259]: "Tarih:"
+                  - generic [ref=e260]: 2025-11-13 -
+                - generic [ref=e261]:
+                  - img [ref=e262]
+                  - strong [ref=e265]: "Fatura Sayısı:"
+                  - generic [ref=e266]: 11 adet
+                - generic [ref=e267]:
+                  - img [ref=e268]
+                  - strong [ref=e271]: "Toplam Tutar:"
+                  - generic [ref=e272]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e274]
+          - generic [ref=e275] [cursor=pointer]:
+            - generic [ref=e276]:
+              - generic [ref=e277]:
+                - heading "Ödeme Süreci - Ekstre Yükleme (Aşama 3)" [level=3] [ref=e278]
+                - generic [ref=e279]:
+                  - generic [ref=e280]: Üzerine alındı
+                  - generic [ref=e281]: Düzenlenebilir
+              - paragraph [ref=e282]: ÖS-99 ödeme süreci - 11 fatura, 29,275.00 USD için ekstre yükleme ve ödeme tutarı düzenleme bekleniyor.
+              - generic [ref=e283]:
+                - generic [ref=e284]:
+                  - img [ref=e285]
+                  - strong [ref=e288]: "Başlatan:"
+                  - generic [ref=e289]: Hasan Helvali
+                - generic [ref=e290]:
+                  - img [ref=e291]
+                  - strong [ref=e295]: "Atanan:"
+                  - generic [ref=e296]:
+                    - text: Deneme Deneme
+                    - generic [ref=e297]: ()
+                - generic [ref=e298]:
+                  - img [ref=e299]
+                  - strong [ref=e301]: "Tarih:"
+                  - generic [ref=e302]: 2025-11-13 -
+                - generic [ref=e303]:
+                  - img [ref=e304]
+                  - strong [ref=e307]: "Fatura Sayısı:"
+                  - generic [ref=e308]: 11 adet
+            - button "Görevi Görüntüle" [ref=e310]
+```

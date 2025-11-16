@@ -26,7 +26,7 @@ test.describe('End-to-End Payment Approval Flow', () => {
     const loginPage = new LoginPage(page);
     const stage1Page = new Stage1Page(page);
 
-    await loginPage.goto();
+    await loginPage.navigate();
     await loginPage.login(STAGE_USERS.STAGE_1);
 
     // Create a new payment request
@@ -46,7 +46,7 @@ test.describe('End-to-End Payment Approval Flow', () => {
     const loginPage = new LoginPage(page);
     const stage2Page = new Stage2Page(page);
 
-    await loginPage.goto();
+    await loginPage.navigate();
     // Assuming it's an internal department task
     await loginPage.login(STAGE_USERS.STAGE_2_INTERNAL);
     await stage2Page.verifyOnPage();
@@ -59,7 +59,7 @@ test.describe('End-to-End Payment Approval Flow', () => {
     const loginPage = new LoginPage(page);
     const stage3Page = new Stage3Page(page);
 
-    await loginPage.goto();
+    await loginPage.navigate();
     await loginPage.login(STAGE_USERS.STAGE_3);
     await stage3Page.navigateToTask(taskId);
 
@@ -72,7 +72,7 @@ test.describe('End-to-End Payment Approval Flow', () => {
     const loginPage = new LoginPage(page);
     const stage4Page = new Stage4Page(page);
 
-    await loginPage.goto();
+    await loginPage.navigate();
     await loginPage.login(STAGE_USERS.STAGE_4);
     await stage4Page.navigateToTask(taskId);
 
@@ -84,7 +84,7 @@ test.describe('End-to-End Payment Approval Flow', () => {
     const loginPage = new LoginPage(page);
     const stage5Page = new Stage5Page(page);
 
-    await loginPage.goto();
+    await loginPage.navigate();
     await loginPage.login(STAGE_USERS.STAGE_5);
     await stage5Page.navigateToTask(taskId);
 
@@ -96,7 +96,7 @@ test.describe('End-to-End Payment Approval Flow', () => {
     const loginPage = new LoginPage(page);
     const stage6Page = new Stage6Page(page);
 
-    await loginPage.goto();
+    await loginPage.navigate();
     await loginPage.login(STAGE_USERS.STAGE_6);
     await stage6Page.navigateToTask(taskId);
 
@@ -109,7 +109,7 @@ test.describe('End-to-End Payment Approval Flow', () => {
     const loginPage = new LoginPage(page);
     const completedPage = new CompletedProcessesPage(page);
 
-    await loginPage.goto();
+    await loginPage.navigate();
     await loginPage.login(TEST_USERS.ADMIN);
     await completedPage.navigate();
 

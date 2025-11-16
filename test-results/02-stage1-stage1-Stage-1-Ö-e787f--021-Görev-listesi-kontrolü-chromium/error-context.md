@@ -1,0 +1,80 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e5]:
+        - img "Anadolu Bakır" [ref=e7]
+        - button "Toggle sidebar collapse" [ref=e8] [cursor=pointer]:
+          - img [ref=e9]
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - link "Anasayfa" [ref=e12] [cursor=pointer]:
+            - /url: /
+            - button "Anasayfa" [ref=e13]:
+              - img [ref=e14]
+              - generic [ref=e17]: Anasayfa
+          - generic [ref=e18]:
+            - button "Satınalma" [ref=e19] [cursor=pointer]:
+              - img [ref=e20]
+              - generic [ref=e24]: Satınalma
+              - img [ref=e25]
+            - generic [ref=e27]:
+              - link "Satınalma Talep Formu" [ref=e28] [cursor=pointer]:
+                - /url: /talep-olustur
+                - button "Satınalma Talep Formu" [ref=e29]: Satınalma Talep Formu
+              - link "Talep Listesi" [ref=e31] [cursor=pointer]:
+                - /url: /talep-listesi
+                - button "Talep Listesi" [ref=e32]: Talep Listesi
+          - button "Finans" [ref=e35] [cursor=pointer]:
+            - img [ref=e36]
+            - generic [ref=e38]: Finans
+            - img [ref=e39]
+    - generic [ref=e41]:
+      - banner [ref=e42]:
+        - generic [ref=e43]:
+          - button "Görev Listesi" [ref=e45] [cursor=pointer]
+          - button "Deneme Deneme" [ref=e47] [cursor=pointer]:
+            - img [ref=e49]
+            - generic [ref=e52]: Deneme Deneme
+            - img [ref=e53]
+        - heading "Görev Listesi" [level=1] [ref=e57]
+      - main [ref=e58]:
+        - generic [ref=e59]:
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - text: Atanan
+              - combobox [disabled] [ref=e63]:
+                - generic: Rolüme Atananlar
+                - img [ref=e64]
+            - generic [ref=e66]:
+              - text: Görev Tipi
+              - combobox [ref=e67] [cursor=pointer]:
+                - generic: Tümü
+                - img [ref=e68]
+            - generic [ref=e70]:
+              - text: Başlangıç Tarihi
+              - textbox [ref=e71]
+            - generic [ref=e72]:
+              - text: Bitiş Tarihi
+              - textbox [ref=e73]
+            - generic [ref=e74]:
+              - text: Görev Durumu
+              - combobox [ref=e75] [cursor=pointer]:
+                - generic: Devam Eden Süreçler
+                - img [ref=e76]
+          - generic [ref=e80]:
+            - paragraph [ref=e81]: Görev bulunamadı
+            - paragraph [ref=e82]: Filtreye uygun görev bulunamadı veya henüz görev oluşturulmamış.
+            - generic [ref=e83]:
+              - paragraph [ref=e84]: "ℹ️ Bilgi:"
+              - list [ref=e85]:
+                - listitem [ref=e86]: Görevler, ödeme süreçlerinde "Onaya Gönder" butonuna tıklandığında (Aşama 2) oluşturulur.
+                - listitem [ref=e87]:
+                  - strong [ref=e88]: Aşama 1'de (Fatura seçimi ve özet oluşturma) görev bulunmaz.
+                  - text: Bu normal bir durumdur.
+                - listitem [ref=e89]: "\"Tümü\" filtresi seçili olsa bile, Aşama 1'de görev olmadığı için liste boş görünecektir."
+                - listitem [ref=e90]: Farklı filtreler deneyerek arama yapabilirsiniz.
+  - generic [ref=e94]: Yükleniyor...
+```

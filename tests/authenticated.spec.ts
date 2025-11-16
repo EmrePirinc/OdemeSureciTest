@@ -7,7 +7,7 @@ test.describe('Authenticated User Experience', () => {
 
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page);
-    await loginPage.goto();
+    await loginPage.navigate();
     await loginPage.login(TEST_USERS.FINANCE_USER);
   });
 

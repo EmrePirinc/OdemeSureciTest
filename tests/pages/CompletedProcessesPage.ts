@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { Page, expect } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 /**
@@ -41,7 +41,7 @@ export class CompletedProcessesPage extends BasePage {
    * Arama sonucunda en az bir sonuç olduğunu doğrula
    */
   async verifyProcessIsListed(): Promise<void> {
-    const rowCount = await this.getCount(this.selectors.tableRow);
+    const rowCount = await this.page.locator(this.selectors.tableRow).count();
     expect(rowCount).toBeGreaterThan(0);
   }
 

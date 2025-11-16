@@ -14,7 +14,7 @@ test.describe('Completed Processes Verification', () => {
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page);
     completedPage = new CompletedProcessesPage(page);
-    await loginPage.goto();
+    await loginPage.navigate();
     // Admin or a finance user should be able to see completed processes
     await loginPage.login(TEST_USERS.ADMIN);
     await completedPage.navigate();

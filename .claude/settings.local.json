@@ -4,7 +4,13 @@
       "Bash(npx playwright install:*)",
       "Bash(git remote set-url:*)",
       "Bash(git branch:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(printf:*)",
+      "Bash(.claude/commands/run-tests.md)",
+      "Bash(cat:*)",
+      "Bash(npx playwright test:*)",
+      "Bash(timeout:*)",
+      "Bash(dir playwright-report)"
     ],
     "deny": [],
     "ask": []

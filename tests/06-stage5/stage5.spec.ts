@@ -12,7 +12,7 @@ test.describe('Stage 5 - General Manager Actions', () => {
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page);
     stage5Page = new Stage5Page(page);
-    await loginPage.goto();
+    await loginPage.navigate();
     await loginPage.login(TEST_USERS.GENERAL_MANAGER);
     await stage5Page.navigateToTask(TASK_ID_FOR_STAGE5);
   });

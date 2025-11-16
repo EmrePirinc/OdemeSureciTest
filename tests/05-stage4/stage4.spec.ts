@@ -12,7 +12,7 @@ test.describe('Stage 4 - Finance Manager Actions', () => {
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page);
     stage4Page = new Stage4Page(page);
-    await loginPage.goto();
+    await loginPage.navigate();
     await loginPage.login(TEST_USERS.FINANCE_MANAGER);
     await stage4Page.navigateToTask(TASK_ID_FOR_STAGE4);
   });

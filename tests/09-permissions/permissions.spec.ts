@@ -45,7 +45,7 @@ test.describe('Role-Based Access Control (RBAC) - Permissions', () => {
         const page = await context.newPage();
         const loginPage = new LoginPage(page);
 
-        await loginPage.goto();
+        await loginPage.navigate();
         await loginPage.login(user);
 
         await page.goto(pageUrl);

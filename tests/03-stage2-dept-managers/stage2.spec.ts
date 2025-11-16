@@ -14,7 +14,7 @@ test.describe('Stage 2 - Department Managers Approval', () => {
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page);
     stage2Page = new Stage2Page(page);
-    await loginPage.goto();
+    await loginPage.navigate();
   });
 
   test('Internal Market Manager can approve a task', async ({ page }) => {

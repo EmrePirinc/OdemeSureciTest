@@ -1,0 +1,46 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - img "Anadolu Bakır" [ref=e11]
+        - img "Ottocool" [ref=e13]
+      - heading "Hoş Geldiniz" [level=1] [ref=e14]
+      - paragraph [ref=e15]: Sisteme giriş yaparak devam edin
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: Şirket
+        - combobox [ref=e19] [cursor=pointer]:
+          - option "ABPARALELTEST6"
+          - option "ABPARALELTEST7"
+          - option "ANADOLU11"
+          - option "ANADOLU5"
+          - option "ANADOLU6"
+          - option "ANADOLU8"
+      - generic [ref=e20]:
+        - generic [ref=e21]: Kullanıcı Adı
+        - textbox "Kullanıcı adınızı giriniz" [ref=e22]
+      - generic [ref=e23]:
+        - generic [ref=e24]: Şifre
+        - generic [ref=e25]:
+          - textbox "Şifrenizi giriniz" [ref=e26]
+          - button [ref=e27] [cursor=pointer]:
+            - img [ref=e28]
+      - button "Giriş Yap" [ref=e31] [cursor=pointer]:
+        - generic [ref=e32]: Giriş Yap
+  - generic [ref=e34]:
+    - img "Anadolu Bakır 1"
+    - img "Anadolu Bakır 2"
+    - img "Anadolu Bakır 3" [ref=e37]
+    - generic [ref=e42]:
+      - generic [ref=e44]: AB
+      - generic [ref=e45]:
+        - heading "Anadolu Bakır" [level=3] [ref=e46]
+        - paragraph [ref=e47]: Excellence in Manufacturing
+    - generic [ref=e48]:
+      - button "Resim 1" [ref=e49] [cursor=pointer]
+      - button "Resim 2" [ref=e50] [cursor=pointer]
+      - button "Resim 3" [ref=e51] [cursor=pointer]
+```

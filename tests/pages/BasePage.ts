@@ -73,4 +73,119 @@ export class BasePage {
     ]);
     return download.suggestedFilename();
   }
+
+  /**
+   * Wait for specified milliseconds
+   */
+  async wait(ms: number): Promise<void> {
+    await this.page.waitForTimeout(ms);
+  }
+
+  /**
+   * Get locator for selector
+   */
+  locator(selector: string): Locator {
+    return this.page.locator(selector);
+  }
+
+  /**
+   * Fill input field
+   */
+  async fillInput(selector: string, value: string): Promise<void> {
+    await this.page.locator(selector).fill(value);
+  }
+
+  /**
+   * Select option from dropdown
+   */
+  async selectOption(selector: string, index: number): Promise<void> {
+    await this.page.locator(selector).selectOption({ index });
+  }
+
+  /**
+   * Check if element is visible
+   */
+  async isVisible(selector: string, timeout: number = 2000): Promise<boolean> {
+    return this.page.locator(selector).isVisible({ timeout }).catch(() => false);
+  }
+
+  /**
+   * Check if element is enabled
+   */
+  async isEnabled(selector: string): Promise<boolean> {
+    return this.page.locator(selector).isEnabled();
+  }
+
+  /**
+   * Get attribute value
+   */
+  async getAttribute(selector: string, attribute: string): Promise<string | null> {
+    return this.page.locator(selector).getAttribute(attribute);
+  }
+
+  /**
+   * Take screenshot
+   */
+  async takeScreenshot(name: string, fullPage: boolean = false): Promise<void> {
+    await this.page.screenshot({
+      path: `screenshots/${name}.png`,
+      fullPage
+    });
+  }
+
+  /**
+   * Verify element is visible
+   */
+  async verifyVisible(selector: string, timeout: number = 10000): Promise<void> {
+    await expect(this.page.locator(selector).first()).toBeVisible({ timeout });
+  }
+
+  /**
+   * Verify text content
+   */
+  async verifyText(selector: string, text: string | RegExp, timeout: number = 10000): Promise<void> {
+    await expect(this.page.locator(selector).first()).toHaveText(text, { timeout });
+  }
+
+  /**
+   * Verify element is enabled
+   */
+  async verifyEnabled(selector: string, timeout: number = 10000): Promise<void> {
+    await expect(this.page.locator(selector).first()).toBeEnabled({ timeout });
+  }
+
+  /**
+   * Wait for selector to be visible
+   */
+  async waitForSelector(selector: string, timeout: number = 10000): Promise<void> {
+    await this.page.locator(selector).first().waitFor({ state: 'visible', timeout });
+  }
+
+  /**
+   * Wait for spinner/loader to disappear
+   */
+  async waitForSpinner(): Promise<void> {
+    await waitForSpinner(this.page);
+  }
+
+  /**
+   * Check if element is visible within a specific row
+   */
+  async isVisibleInRow(rowLocator: Locator, selector: string): Promise<boolean> {
+    return rowLocator.locator(selector).isVisible({ timeout: 2000 }).catch(() => false);
+  }
+
+  /**
+   * Check if element is enabled within a specific row
+   */
+  async isEnabledInRow(rowLocator: Locator, selector: string): Promise<boolean> {
+    return rowLocator.locator(selector).isEnabled().catch(() => false);
+  }
+
+  /**
+   * Verify element is disabled
+   */
+  async verifyDisabled(selector: string, timeout: number = 10000): Promise<void> {
+    await expect(this.page.locator(selector).first()).toBeDisabled({ timeout });
+  }
 }

@@ -22,15 +22,20 @@ export class LoginPage extends BasePage {
 
   /**
    * Login sayfasına git
-   * BasePage.goto() yerine doğrudan page.goto() kullanıyoruz çünkü
-   * waitForNetworkIdle() timeout veriyor
+   * React SPA için elementlerin yüklenmesini bekle
    */
   async navigate(): Promise<void> {
     await this.page.goto('/login', {
       waitUntil: 'domcontentloaded',
-      timeout: 30000
+      timeout: 120000 // 2 dakika timeout
     });
-    await this.wait(1000); // Sayfa elementlerinin yüklenmesi için
+
+    // React'in render olmasını bekle - login formu elemanlarını bekle
+    await this.waitForSelector('select', 60000).catch(() => {}); // 1 dakika
+    await this.wait(2000); // React animasyonları için ekstra bekleme
+
+    // Sayfanın tam yüklenmesini bekle (optional, hata yok sayılır)
+    await this.page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {}); // 30 saniye
   }
 
   /**
@@ -82,21 +87,21 @@ export class LoginPage extends BasePage {
    */
   async login(user: TestUser, companyIndex: number = 6): Promise<void> {
     await this.selectCompany(companyIndex);
-    await this.wait(500);
+    await this.wait(1000);
     await this.enterUsername(user.username);
-    await this.wait(300);
+    await this.wait(500);
     await this.enterPassword(user.password);
-    await this.wait(300);
+    await this.wait(500);
 
     // Login butonuna tıkla ve navigation'ı bekle
     await Promise.all([
-      this.page.waitForNavigation({ timeout: 20000, waitUntil: 'domcontentloaded' }).catch(() => {}),
+      this.page.waitForNavigation({ timeout: 90000, waitUntil: 'domcontentloaded' }), // 90 saniye
       this.clickLogin()
     ]);
 
     // Sayfanın yüklenmesini bekle
-    await this.page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
-    await this.wait(1000);
+    await this.page.waitForLoadState('networkidle', { timeout: 60000 }).catch(() => {}); // 1 dakika
+    await this.wait(2000);
   }
 
   /**

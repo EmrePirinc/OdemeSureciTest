@@ -1,0 +1,715 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img "Anadolu Bakır" [ref=e7]
+      - button "Toggle sidebar collapse" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+    - navigation [ref=e10]:
+      - generic [ref=e11]:
+        - link "Anasayfa" [ref=e12] [cursor=pointer]:
+          - /url: /
+          - button "Anasayfa" [ref=e13]:
+            - img [ref=e14]
+            - generic [ref=e17]: Anasayfa
+        - generic [ref=e18]:
+          - button "Satınalma" [ref=e19] [cursor=pointer]:
+            - img [ref=e20]
+            - generic [ref=e24]: Satınalma
+            - img [ref=e25]
+          - generic [ref=e27]:
+            - link "Satınalma Talep Formu" [ref=e28] [cursor=pointer]:
+              - /url: /talep-olustur
+              - button "Satınalma Talep Formu" [ref=e29]: Satınalma Talep Formu
+            - link "Talep Listesi" [ref=e31] [cursor=pointer]:
+              - /url: /talep-listesi
+              - button "Talep Listesi" [ref=e32]: Talep Listesi
+        - button "Finans" [ref=e35] [cursor=pointer]:
+          - img [ref=e36]
+          - generic [ref=e38]: Finans
+          - img [ref=e39]
+  - generic [ref=e41]:
+    - banner [ref=e42]:
+      - generic [ref=e43]:
+        - button "Görev Listesi" [ref=e45] [cursor=pointer]
+        - button "Dıs Piyasa" [ref=e47] [cursor=pointer]:
+          - img [ref=e49]
+          - generic [ref=e52]: Dıs Piyasa
+          - img [ref=e53]
+      - heading "Görev Listesi" [level=1] [ref=e57]
+    - main [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - text: Atanan
+            - combobox [disabled] [ref=e63]:
+              - generic: Rolüme Atananlar
+              - img [ref=e64]
+          - generic [ref=e66]:
+            - text: Görev Tipi
+            - combobox [ref=e67] [cursor=pointer]:
+              - generic: Tümü
+              - img [ref=e68]
+          - generic [ref=e70]:
+            - text: Başlangıç Tarihi
+            - textbox [ref=e71]
+          - generic [ref=e72]:
+            - text: Bitiş Tarihi
+            - textbox [ref=e73]
+          - generic [ref=e74]:
+            - text: Görev Durumu
+            - combobox [ref=e75] [cursor=pointer]:
+              - generic: Devam Eden Süreçler
+              - img [ref=e76]
+        - generic [ref=e78]:
+          - generic [ref=e79] [cursor=pointer]:
+            - generic [ref=e80]:
+              - generic [ref=e81]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e82]
+                - generic [ref=e84]: Beklemede
+              - paragraph [ref=e85]: ÖS-158 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e86]:
+                - generic [ref=e87]:
+                  - img [ref=e88]
+                  - strong [ref=e91]: "Başlatan:"
+                  - generic [ref=e92]: Deneme Deneme
+                - generic [ref=e93]:
+                  - img [ref=e94]
+                  - strong [ref=e98]: "Atanan:"
+                  - generic [ref=e99]: Atanmamış
+                - generic [ref=e100]:
+                  - img [ref=e101]
+                  - strong [ref=e103]: "Tarih:"
+                  - generic [ref=e104]: 2025-11-14 -
+                - generic [ref=e105]:
+                  - img [ref=e106]
+                  - strong [ref=e109]: "Fatura Sayısı:"
+                  - generic [ref=e110]: 11 adet
+                - generic [ref=e111]:
+                  - img [ref=e112]
+                  - strong [ref=e115]: "Toplam Tutar:"
+                  - generic [ref=e116]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e118]
+          - generic [ref=e119] [cursor=pointer]:
+            - generic [ref=e120]:
+              - generic [ref=e121]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e122]
+                - generic [ref=e123]:
+                  - generic [ref=e124]: Üzerine alındı
+                  - generic [ref=e125]: Düzenlenebilir
+              - paragraph [ref=e126]: ÖS-157 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e127]:
+                - generic [ref=e128]:
+                  - img [ref=e129]
+                  - strong [ref=e132]: "Başlatan:"
+                  - generic [ref=e133]: Deneme Deneme
+                - generic [ref=e134]:
+                  - img [ref=e135]
+                  - strong [ref=e139]: "Atanan:"
+                  - generic [ref=e140]:
+                    - text: Dıs Piyasa
+                    - generic [ref=e141]: ()
+                - generic [ref=e142]:
+                  - img [ref=e143]
+                  - strong [ref=e145]: "Tarih:"
+                  - generic [ref=e146]: 2025-11-14 -
+                - generic [ref=e147]:
+                  - img [ref=e148]
+                  - strong [ref=e151]: "Fatura Sayısı:"
+                  - generic [ref=e152]: 11 adet
+            - button "Görevi Görüntüle" [ref=e154]
+          - generic [ref=e155] [cursor=pointer]:
+            - generic [ref=e156]:
+              - generic [ref=e157]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e158]
+                - generic [ref=e159]:
+                  - generic [ref=e160]: Üzerine alındı
+                  - generic [ref=e161]: Düzenlenebilir
+              - paragraph [ref=e162]: ÖS-144 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e163]:
+                - generic [ref=e164]:
+                  - img [ref=e165]
+                  - strong [ref=e168]: "Başlatan:"
+                  - generic [ref=e169]: Hasan Helvali
+                - generic [ref=e170]:
+                  - img [ref=e171]
+                  - strong [ref=e175]: "Atanan:"
+                  - generic [ref=e176]:
+                    - text: Dıs Piyasa
+                    - generic [ref=e177]: ()
+                - generic [ref=e178]:
+                  - img [ref=e179]
+                  - strong [ref=e181]: "Tarih:"
+                  - generic [ref=e182]: 2025-11-14 -
+                - generic [ref=e183]:
+                  - img [ref=e184]
+                  - strong [ref=e187]: "Fatura Sayısı:"
+                  - generic [ref=e188]: 11 adet
+            - button "Görevi Görüntüle" [ref=e190]
+          - generic [ref=e191] [cursor=pointer]:
+            - generic [ref=e192]:
+              - generic [ref=e193]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e194]
+                - generic [ref=e196]: Beklemede
+              - paragraph [ref=e197]: ÖS-142 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e198]:
+                - generic [ref=e199]:
+                  - img [ref=e200]
+                  - strong [ref=e203]: "Başlatan:"
+                  - generic [ref=e204]: Hasan Helvali
+                - generic [ref=e205]:
+                  - img [ref=e206]
+                  - strong [ref=e210]: "Atanan:"
+                  - generic [ref=e211]: Atanmamış
+                - generic [ref=e212]:
+                  - img [ref=e213]
+                  - strong [ref=e215]: "Tarih:"
+                  - generic [ref=e216]: 2025-11-14 -
+                - generic [ref=e217]:
+                  - img [ref=e218]
+                  - strong [ref=e221]: "Fatura Sayısı:"
+                  - generic [ref=e222]: 11 adet
+                - generic [ref=e223]:
+                  - img [ref=e224]
+                  - strong [ref=e227]: "Toplam Tutar:"
+                  - generic [ref=e228]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e230]
+          - generic [ref=e231] [cursor=pointer]:
+            - generic [ref=e232]:
+              - generic [ref=e233]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e234]
+                - generic [ref=e236]: Beklemede
+              - paragraph [ref=e237]: ÖS-138 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e238]:
+                - generic [ref=e239]:
+                  - img [ref=e240]
+                  - strong [ref=e243]: "Başlatan:"
+                  - generic [ref=e244]: Hasan Helvali
+                - generic [ref=e245]:
+                  - img [ref=e246]
+                  - strong [ref=e250]: "Atanan:"
+                  - generic [ref=e251]: Atanmamış
+                - generic [ref=e252]:
+                  - img [ref=e253]
+                  - strong [ref=e255]: "Tarih:"
+                  - generic [ref=e256]: 2025-11-14 -
+                - generic [ref=e257]:
+                  - img [ref=e258]
+                  - strong [ref=e261]: "Fatura Sayısı:"
+                  - generic [ref=e262]: 11 adet
+                - generic [ref=e263]:
+                  - img [ref=e264]
+                  - strong [ref=e267]: "Toplam Tutar:"
+                  - generic [ref=e268]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e270]
+          - generic [ref=e271] [cursor=pointer]:
+            - generic [ref=e272]:
+              - generic [ref=e273]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e274]
+                - generic [ref=e276]: Beklemede
+              - paragraph [ref=e277]: ÖS-137 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e278]:
+                - generic [ref=e279]:
+                  - img [ref=e280]
+                  - strong [ref=e283]: "Başlatan:"
+                  - generic [ref=e284]: Hasan Helvali
+                - generic [ref=e285]:
+                  - img [ref=e286]
+                  - strong [ref=e290]: "Atanan:"
+                  - generic [ref=e291]: Atanmamış
+                - generic [ref=e292]:
+                  - img [ref=e293]
+                  - strong [ref=e295]: "Tarih:"
+                  - generic [ref=e296]: 2025-11-14 -
+                - generic [ref=e297]:
+                  - img [ref=e298]
+                  - strong [ref=e301]: "Fatura Sayısı:"
+                  - generic [ref=e302]: 11 adet
+                - generic [ref=e303]:
+                  - img [ref=e304]
+                  - strong [ref=e307]: "Toplam Tutar:"
+                  - generic [ref=e308]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e310]
+          - generic [ref=e311] [cursor=pointer]:
+            - generic [ref=e312]:
+              - generic [ref=e313]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e314]
+                - generic [ref=e316]: Beklemede
+              - paragraph [ref=e317]: ÖS-136 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e318]:
+                - generic [ref=e319]:
+                  - img [ref=e320]
+                  - strong [ref=e323]: "Başlatan:"
+                  - generic [ref=e324]: Hasan Helvali
+                - generic [ref=e325]:
+                  - img [ref=e326]
+                  - strong [ref=e330]: "Atanan:"
+                  - generic [ref=e331]: Atanmamış
+                - generic [ref=e332]:
+                  - img [ref=e333]
+                  - strong [ref=e335]: "Tarih:"
+                  - generic [ref=e336]: 2025-11-14 -
+                - generic [ref=e337]:
+                  - img [ref=e338]
+                  - strong [ref=e341]: "Fatura Sayısı:"
+                  - generic [ref=e342]: 11 adet
+                - generic [ref=e343]:
+                  - img [ref=e344]
+                  - strong [ref=e347]: "Toplam Tutar:"
+                  - generic [ref=e348]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e350]
+          - generic [ref=e351] [cursor=pointer]:
+            - generic [ref=e352]:
+              - generic [ref=e353]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e354]
+                - generic [ref=e356]: Beklemede
+              - paragraph [ref=e357]: ÖS-135 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e358]:
+                - generic [ref=e359]:
+                  - img [ref=e360]
+                  - strong [ref=e363]: "Başlatan:"
+                  - generic [ref=e364]: Hasan Helvali
+                - generic [ref=e365]:
+                  - img [ref=e366]
+                  - strong [ref=e370]: "Atanan:"
+                  - generic [ref=e371]: Atanmamış
+                - generic [ref=e372]:
+                  - img [ref=e373]
+                  - strong [ref=e375]: "Tarih:"
+                  - generic [ref=e376]: 2025-11-13 -
+                - generic [ref=e377]:
+                  - img [ref=e378]
+                  - strong [ref=e381]: "Fatura Sayısı:"
+                  - generic [ref=e382]: 11 adet
+                - generic [ref=e383]:
+                  - img [ref=e384]
+                  - strong [ref=e387]: "Toplam Tutar:"
+                  - generic [ref=e388]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e390]
+          - generic [ref=e391] [cursor=pointer]:
+            - generic [ref=e392]:
+              - generic [ref=e393]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e394]
+                - generic [ref=e395]:
+                  - generic [ref=e396]: Üzerine alındı
+                  - generic [ref=e397]: Düzenlenebilir
+              - paragraph [ref=e398]: ÖS-132 ödeme süreci - 4 fatura, 1.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e399]:
+                - generic [ref=e400]:
+                  - img [ref=e401]
+                  - strong [ref=e404]: "Başlatan:"
+                  - generic [ref=e405]: Deneme Deneme
+                - generic [ref=e406]:
+                  - img [ref=e407]
+                  - strong [ref=e411]: "Atanan:"
+                  - generic [ref=e412]:
+                    - text: Dıs Piyasa
+                    - generic [ref=e413]: ()
+                - generic [ref=e414]:
+                  - img [ref=e415]
+                  - strong [ref=e417]: "Tarih:"
+                  - generic [ref=e418]: 2025-11-13 -
+                - generic [ref=e419]:
+                  - img [ref=e420]
+                  - strong [ref=e423]: "Fatura Sayısı:"
+                  - generic [ref=e424]: 11 adet
+            - button "Görevi Görüntüle" [ref=e426]
+          - generic [ref=e427] [cursor=pointer]:
+            - generic [ref=e428]:
+              - generic [ref=e429]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e430]
+                - generic [ref=e432]: Beklemede
+              - paragraph [ref=e433]: ÖS-131 ödeme süreci - 1 fatura, 1.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e434]:
+                - generic [ref=e435]:
+                  - img [ref=e436]
+                  - strong [ref=e439]: "Başlatan:"
+                  - generic [ref=e440]: Deneme Deneme
+                - generic [ref=e441]:
+                  - img [ref=e442]
+                  - strong [ref=e446]: "Atanan:"
+                  - generic [ref=e447]: Atanmamış
+                - generic [ref=e448]:
+                  - img [ref=e449]
+                  - strong [ref=e451]: "Tarih:"
+                  - generic [ref=e452]: 2025-11-13 -
+                - generic [ref=e453]:
+                  - img [ref=e454]
+                  - strong [ref=e457]: "Fatura Sayısı:"
+                  - generic [ref=e458]: 2 adet
+                - generic [ref=e459]:
+                  - img [ref=e460]
+                  - strong [ref=e463]: "Toplam Tutar:"
+                  - generic [ref=e464]: ₺8,60
+            - button "Görevi Görüntüle" [ref=e466]
+          - generic [ref=e467] [cursor=pointer]:
+            - generic [ref=e468]:
+              - generic [ref=e469]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e470]
+                - generic [ref=e472]: Beklemede
+              - paragraph [ref=e473]: ÖS-130 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e474]:
+                - generic [ref=e475]:
+                  - img [ref=e476]
+                  - strong [ref=e479]: "Başlatan:"
+                  - generic [ref=e480]: Hasan Helvali
+                - generic [ref=e481]:
+                  - img [ref=e482]
+                  - strong [ref=e486]: "Atanan:"
+                  - generic [ref=e487]: Atanmamış
+                - generic [ref=e488]:
+                  - img [ref=e489]
+                  - strong [ref=e491]: "Tarih:"
+                  - generic [ref=e492]: 2025-11-13 -
+                - generic [ref=e493]:
+                  - img [ref=e494]
+                  - strong [ref=e497]: "Fatura Sayısı:"
+                  - generic [ref=e498]: 11 adet
+                - generic [ref=e499]:
+                  - img [ref=e500]
+                  - strong [ref=e503]: "Toplam Tutar:"
+                  - generic [ref=e504]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e506]
+          - generic [ref=e507] [cursor=pointer]:
+            - generic [ref=e508]:
+              - generic [ref=e509]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e510]
+                - generic [ref=e512]: Beklemede
+              - paragraph [ref=e513]: ÖS-128 ödeme süreci - 1 fatura, 1.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e514]:
+                - generic [ref=e515]:
+                  - img [ref=e516]
+                  - strong [ref=e519]: "Başlatan:"
+                  - generic [ref=e520]: Deneme Deneme
+                - generic [ref=e521]:
+                  - img [ref=e522]
+                  - strong [ref=e526]: "Atanan:"
+                  - generic [ref=e527]: Atanmamış
+                - generic [ref=e528]:
+                  - img [ref=e529]
+                  - strong [ref=e531]: "Tarih:"
+                  - generic [ref=e532]: 2025-11-13 -
+                - generic [ref=e533]:
+                  - img [ref=e534]
+                  - strong [ref=e537]: "Fatura Sayısı:"
+                  - generic [ref=e538]: 2 adet
+                - generic [ref=e539]:
+                  - img [ref=e540]
+                  - strong [ref=e543]: "Toplam Tutar:"
+                  - generic [ref=e544]: ₺8,60
+            - button "Görevi Görüntüle" [ref=e546]
+          - generic [ref=e547] [cursor=pointer]:
+            - generic [ref=e548]:
+              - generic [ref=e549]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e550]
+                - generic [ref=e551]:
+                  - generic [ref=e552]: Üzerine alındı
+                  - generic [ref=e553]: Düzenlenebilir
+              - paragraph [ref=e554]: ÖS-127 ödeme süreci - 1 fatura, 1.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e555]:
+                - generic [ref=e556]:
+                  - img [ref=e557]
+                  - strong [ref=e560]: "Başlatan:"
+                  - generic [ref=e561]: Deneme Deneme
+                - generic [ref=e562]:
+                  - img [ref=e563]
+                  - strong [ref=e567]: "Atanan:"
+                  - generic [ref=e568]:
+                    - text: Dıs Piyasa
+                    - generic [ref=e569]: ()
+                - generic [ref=e570]:
+                  - img [ref=e571]
+                  - strong [ref=e573]: "Tarih:"
+                  - generic [ref=e574]: 2025-11-13 -
+                - generic [ref=e575]:
+                  - img [ref=e576]
+                  - strong [ref=e579]: "Fatura Sayısı:"
+                  - generic [ref=e580]: 2 adet
+            - button "Görevi Görüntüle" [ref=e582]
+          - generic [ref=e583] [cursor=pointer]:
+            - generic [ref=e584]:
+              - generic [ref=e585]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e586]
+                - generic [ref=e587]:
+                  - generic [ref=e588]: Üzerine alındı
+                  - generic [ref=e589]: Düzenlenebilir
+              - paragraph [ref=e590]: ÖS-126 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e591]:
+                - generic [ref=e592]:
+                  - img [ref=e593]
+                  - strong [ref=e596]: "Başlatan:"
+                  - generic [ref=e597]: Deneme Deneme
+                - generic [ref=e598]:
+                  - img [ref=e599]
+                  - strong [ref=e603]: "Atanan:"
+                  - generic [ref=e604]:
+                    - text: Dıs Piyasa
+                    - generic [ref=e605]: ()
+                - generic [ref=e606]:
+                  - img [ref=e607]
+                  - strong [ref=e609]: "Tarih:"
+                  - generic [ref=e610]: 2025-11-13 -
+                - generic [ref=e611]:
+                  - img [ref=e612]
+                  - strong [ref=e615]: "Fatura Sayısı:"
+                  - generic [ref=e616]: 11 adet
+                - generic [ref=e617]:
+                  - img [ref=e618]
+                  - strong [ref=e621]: "Toplam Tutar:"
+                  - generic [ref=e622]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e624]
+          - generic [ref=e625] [cursor=pointer]:
+            - generic [ref=e626]:
+              - generic [ref=e627]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e628]
+                - generic [ref=e630]: Beklemede
+              - paragraph [ref=e631]: ÖS-120 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e632]:
+                - generic [ref=e633]:
+                  - img [ref=e634]
+                  - strong [ref=e637]: "Başlatan:"
+                  - generic [ref=e638]: Hasan Helvali
+                - generic [ref=e639]:
+                  - img [ref=e640]
+                  - strong [ref=e644]: "Atanan:"
+                  - generic [ref=e645]: Atanmamış
+                - generic [ref=e646]:
+                  - img [ref=e647]
+                  - strong [ref=e649]: "Tarih:"
+                  - generic [ref=e650]: 2025-11-13 -
+                - generic [ref=e651]:
+                  - img [ref=e652]
+                  - strong [ref=e655]: "Fatura Sayısı:"
+                  - generic [ref=e656]: 11 adet
+                - generic [ref=e657]:
+                  - img [ref=e658]
+                  - strong [ref=e661]: "Toplam Tutar:"
+                  - generic [ref=e662]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e664]
+          - generic [ref=e665] [cursor=pointer]:
+            - generic [ref=e666]:
+              - generic [ref=e667]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e668]
+                - generic [ref=e670]: Beklemede
+              - paragraph [ref=e671]: ÖS-116 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e672]:
+                - generic [ref=e673]:
+                  - img [ref=e674]
+                  - strong [ref=e677]: "Başlatan:"
+                  - generic [ref=e678]: Hasan Helvali
+                - generic [ref=e679]:
+                  - img [ref=e680]
+                  - strong [ref=e684]: "Atanan:"
+                  - generic [ref=e685]: Atanmamış
+                - generic [ref=e686]:
+                  - img [ref=e687]
+                  - strong [ref=e689]: "Tarih:"
+                  - generic [ref=e690]: 2025-11-13 -
+                - generic [ref=e691]:
+                  - img [ref=e692]
+                  - strong [ref=e695]: "Fatura Sayısı:"
+                  - generic [ref=e696]: 11 adet
+                - generic [ref=e697]:
+                  - img [ref=e698]
+                  - strong [ref=e701]: "Toplam Tutar:"
+                  - generic [ref=e702]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e704]
+          - generic [ref=e705] [cursor=pointer]:
+            - generic [ref=e706]:
+              - generic [ref=e707]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e708]
+                - generic [ref=e710]: Beklemede
+              - paragraph [ref=e711]: ÖS-113 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e712]:
+                - generic [ref=e713]:
+                  - img [ref=e714]
+                  - strong [ref=e717]: "Başlatan:"
+                  - generic [ref=e718]: Hasan Helvali
+                - generic [ref=e719]:
+                  - img [ref=e720]
+                  - strong [ref=e724]: "Atanan:"
+                  - generic [ref=e725]: Atanmamış
+                - generic [ref=e726]:
+                  - img [ref=e727]
+                  - strong [ref=e729]: "Tarih:"
+                  - generic [ref=e730]: 2025-11-13 -
+                - generic [ref=e731]:
+                  - img [ref=e732]
+                  - strong [ref=e735]: "Fatura Sayısı:"
+                  - generic [ref=e736]: 11 adet
+                - generic [ref=e737]:
+                  - img [ref=e738]
+                  - strong [ref=e741]: "Toplam Tutar:"
+                  - generic [ref=e742]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e744]
+          - generic [ref=e745] [cursor=pointer]:
+            - generic [ref=e746]:
+              - generic [ref=e747]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e748]
+                - generic [ref=e750]: Beklemede
+              - paragraph [ref=e751]: ÖS-104 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e752]:
+                - generic [ref=e753]:
+                  - img [ref=e754]
+                  - strong [ref=e757]: "Başlatan:"
+                  - generic [ref=e758]: Deneme Deneme
+                - generic [ref=e759]:
+                  - img [ref=e760]
+                  - strong [ref=e764]: "Atanan:"
+                  - generic [ref=e765]: Atanmamış
+                - generic [ref=e766]:
+                  - img [ref=e767]
+                  - strong [ref=e769]: "Tarih:"
+                  - generic [ref=e770]: 2025-11-13 -
+                - generic [ref=e771]:
+                  - img [ref=e772]
+                  - strong [ref=e775]: "Fatura Sayısı:"
+                  - generic [ref=e776]: 11 adet
+                - generic [ref=e777]:
+                  - img [ref=e778]
+                  - strong [ref=e781]: "Toplam Tutar:"
+                  - generic [ref=e782]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e784]
+          - generic [ref=e785] [cursor=pointer]:
+            - generic [ref=e786]:
+              - generic [ref=e787]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e788]
+                - generic [ref=e790]: Beklemede
+              - paragraph [ref=e791]: ÖS-103 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e792]:
+                - generic [ref=e793]:
+                  - img [ref=e794]
+                  - strong [ref=e797]: "Başlatan:"
+                  - generic [ref=e798]: Deneme Deneme
+                - generic [ref=e799]:
+                  - img [ref=e800]
+                  - strong [ref=e804]: "Atanan:"
+                  - generic [ref=e805]: Atanmamış
+                - generic [ref=e806]:
+                  - img [ref=e807]
+                  - strong [ref=e809]: "Tarih:"
+                  - generic [ref=e810]: 2025-11-13 -
+                - generic [ref=e811]:
+                  - img [ref=e812]
+                  - strong [ref=e815]: "Fatura Sayısı:"
+                  - generic [ref=e816]: 11 adet
+                - generic [ref=e817]:
+                  - img [ref=e818]
+                  - strong [ref=e821]: "Toplam Tutar:"
+                  - generic [ref=e822]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e824]
+          - generic [ref=e825] [cursor=pointer]:
+            - generic [ref=e826]:
+              - generic [ref=e827]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e828]
+                - generic [ref=e830]: Beklemede
+              - paragraph [ref=e831]: ÖS-98 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e832]:
+                - generic [ref=e833]:
+                  - img [ref=e834]
+                  - strong [ref=e837]: "Başlatan:"
+                  - generic [ref=e838]: Hasan Helvali
+                - generic [ref=e839]:
+                  - img [ref=e840]
+                  - strong [ref=e844]: "Atanan:"
+                  - generic [ref=e845]: Atanmamış
+                - generic [ref=e846]:
+                  - img [ref=e847]
+                  - strong [ref=e849]: "Tarih:"
+                  - generic [ref=e850]: 2025-11-13 -
+                - generic [ref=e851]:
+                  - img [ref=e852]
+                  - strong [ref=e855]: "Fatura Sayısı:"
+                  - generic [ref=e856]: 11 adet
+                - generic [ref=e857]:
+                  - img [ref=e858]
+                  - strong [ref=e861]: "Toplam Tutar:"
+                  - generic [ref=e862]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e864]
+          - generic [ref=e865] [cursor=pointer]:
+            - generic [ref=e866]:
+              - generic [ref=e867]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e868]
+                - generic [ref=e870]: Beklemede
+              - paragraph [ref=e871]: ÖS-97 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e872]:
+                - generic [ref=e873]:
+                  - img [ref=e874]
+                  - strong [ref=e877]: "Başlatan:"
+                  - generic [ref=e878]: Hasan Helvali
+                - generic [ref=e879]:
+                  - img [ref=e880]
+                  - strong [ref=e884]: "Atanan:"
+                  - generic [ref=e885]: Atanmamış
+                - generic [ref=e886]:
+                  - img [ref=e887]
+                  - strong [ref=e889]: "Tarih:"
+                  - generic [ref=e890]: 2025-11-13 -
+                - generic [ref=e891]:
+                  - img [ref=e892]
+                  - strong [ref=e895]: "Fatura Sayısı:"
+                  - generic [ref=e896]: 11 adet
+                - generic [ref=e897]:
+                  - img [ref=e898]
+                  - strong [ref=e901]: "Toplam Tutar:"
+                  - generic [ref=e902]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e904]
+          - generic [ref=e905] [cursor=pointer]:
+            - generic [ref=e906]:
+              - generic [ref=e907]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e908]
+                - generic [ref=e910]: Beklemede
+              - paragraph [ref=e911]: ÖS-96 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e912]:
+                - generic [ref=e913]:
+                  - img [ref=e914]
+                  - strong [ref=e917]: "Başlatan:"
+                  - generic [ref=e918]: Hasan Helvali
+                - generic [ref=e919]:
+                  - img [ref=e920]
+                  - strong [ref=e924]: "Atanan:"
+                  - generic [ref=e925]: Atanmamış
+                - generic [ref=e926]:
+                  - img [ref=e927]
+                  - strong [ref=e929]: "Tarih:"
+                  - generic [ref=e930]: 2025-11-13 -
+                - generic [ref=e931]:
+                  - img [ref=e932]
+                  - strong [ref=e935]: "Fatura Sayısı:"
+                  - generic [ref=e936]: 11 adet
+                - generic [ref=e937]:
+                  - img [ref=e938]
+                  - strong [ref=e941]: "Toplam Tutar:"
+                  - generic [ref=e942]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e944]
+          - generic [ref=e945] [cursor=pointer]:
+            - generic [ref=e946]:
+              - generic [ref=e947]:
+                - heading "Ödeme Süreci - Yönetici Onayı Bekliyor (Aşama 2)" [level=3] [ref=e948]
+                - generic [ref=e950]: Beklemede
+              - paragraph [ref=e951]: ÖS-95 ödeme süreci - 4 fatura, 0.00 TRY için departman müdürü onayı bekleniyor.
+              - generic [ref=e952]:
+                - generic [ref=e953]:
+                  - img [ref=e954]
+                  - strong [ref=e957]: "Başlatan:"
+                  - generic [ref=e958]: Hasan Helvali
+                - generic [ref=e959]:
+                  - img [ref=e960]
+                  - strong [ref=e964]: "Atanan:"
+                  - generic [ref=e965]: Atanmamış
+                - generic [ref=e966]:
+                  - img [ref=e967]
+                  - strong [ref=e969]: "Tarih:"
+                  - generic [ref=e970]: 2025-11-13 -
+                - generic [ref=e971]:
+                  - img [ref=e972]
+                  - strong [ref=e975]: "Fatura Sayısı:"
+                  - generic [ref=e976]: 11 adet
+                - generic [ref=e977]:
+                  - img [ref=e978]
+                  - strong [ref=e981]: "Toplam Tutar:"
+                  - generic [ref=e982]: ₺29.275,00
+            - button "Görevi Görüntüle" [ref=e984]
+```

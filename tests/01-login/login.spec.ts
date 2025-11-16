@@ -219,13 +219,18 @@ test.describe('Login Testleri', () => {
     const financeUser = TEST_USERS.FINANCE_USER;
 
     await loginPage.selectCompany(6);
+    await loginPage.wait(500);
     await loginPage.enterUsername(financeUser.username);
+    await loginPage.wait(300);
     await loginPage.enterPassword(financeUser.password);
+    await loginPage.wait(300);
 
-    // Enter tuşuna bas
-    await loginPage.pressEnter();
+    // Enter tuşuna bas ve navigation bekle
+    await Promise.all([
+      page.waitForNavigation({ timeout: 30000, waitUntil: 'domcontentloaded' }),
+      loginPage.pressEnter()
+    ]);
 
-    // Login sayfasından ayrıldığımızı kontrol et
     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
     await loginPage.wait(1000);
 

@@ -1,0 +1,85 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e5]:
+        - img "Anadolu Bakır" [ref=e7]
+        - button "Toggle sidebar collapse" [ref=e8] [cursor=pointer]:
+          - img [ref=e9]
+      - navigation [ref=e10]:
+        - generic [ref=e11]:
+          - link "Anasayfa" [ref=e12] [cursor=pointer]:
+            - /url: /
+            - button "Anasayfa" [ref=e13]:
+              - img [ref=e14]
+              - generic [ref=e17]: Anasayfa
+          - generic [ref=e18]:
+            - button "Satınalma" [ref=e19] [cursor=pointer]:
+              - img [ref=e20]
+              - generic [ref=e24]: Satınalma
+              - img [ref=e25]
+            - generic [ref=e27]:
+              - link "Satınalma Talep Formu" [ref=e28] [cursor=pointer]:
+                - /url: /talep-olustur
+                - button "Satınalma Talep Formu" [ref=e29]: Satınalma Talep Formu
+              - link "Talep Listesi" [ref=e31] [cursor=pointer]:
+                - /url: /talep-listesi
+                - button "Talep Listesi" [ref=e32]: Talep Listesi
+          - button "Finans" [ref=e35] [cursor=pointer]:
+            - img [ref=e36]
+            - generic [ref=e38]: Finans
+            - img [ref=e39]
+          - link "Kullanıcı Yönetimi" [ref=e41] [cursor=pointer]:
+            - /url: /admin
+            - button "Kullanıcı Yönetimi" [ref=e42]:
+              - img [ref=e43]
+              - generic [ref=e45]: Kullanıcı Yönetimi
+    - generic [ref=e46]:
+      - banner [ref=e47]:
+        - generic [ref=e48]:
+          - button "Görev Listesi" [ref=e50] [cursor=pointer]
+          - button "Hasan Helvali" [ref=e52] [cursor=pointer]:
+            - img [ref=e54]
+            - generic [ref=e57]: Hasan Helvali
+            - img [ref=e58]
+        - heading "Görev Listesi" [level=1] [ref=e62]
+      - main [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - text: Atanan
+              - combobox [disabled] [ref=e68]:
+                - generic: Rolüme Atananlar
+                - img [ref=e69]
+            - generic [ref=e71]:
+              - text: Görev Tipi
+              - combobox [ref=e72] [cursor=pointer]:
+                - generic: Tümü
+                - img [ref=e73]
+            - generic [ref=e75]:
+              - text: Başlangıç Tarihi
+              - textbox [ref=e76]
+            - generic [ref=e77]:
+              - text: Bitiş Tarihi
+              - textbox [ref=e78]
+            - generic [ref=e79]:
+              - text: Görev Durumu
+              - combobox [ref=e80] [cursor=pointer]:
+                - generic: Devam Eden Süreçler
+                - img [ref=e81]
+          - generic [ref=e85]:
+            - paragraph [ref=e86]: Görev bulunamadı
+            - paragraph [ref=e87]: Filtreye uygun görev bulunamadı veya henüz görev oluşturulmamış.
+            - generic [ref=e88]:
+              - paragraph [ref=e89]: "ℹ️ Bilgi:"
+              - list [ref=e90]:
+                - listitem [ref=e91]: Görevler, ödeme süreçlerinde "Onaya Gönder" butonuna tıklandığında (Aşama 2) oluşturulur.
+                - listitem [ref=e92]:
+                  - strong [ref=e93]: Aşama 1'de (Fatura seçimi ve özet oluşturma) görev bulunmaz.
+                  - text: Bu normal bir durumdur.
+                - listitem [ref=e94]: "\"Tümü\" filtresi seçili olsa bile, Aşama 1'de görev olmadığı için liste boş görünecektir."
+                - listitem [ref=e95]: Farklı filtreler deneyerek arama yapabilirsiniz.
+  - generic [ref=e99]: Yükleniyor...
+```
